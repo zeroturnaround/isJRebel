@@ -18,6 +18,7 @@ Typos are common place and we shouldn't fail based on a developers inability to 
 * HEwvwk
 * KTrnr;
 * JReebl
+* JWobble
 
 ###3. Case insensitivity
 
