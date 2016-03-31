@@ -1,5 +1,3 @@
-# isJRebel
-
 ![isJRebel](https://zeroturnaround.com/wp-content/uploads/2016/04/isJRebel-April-fools-2016-v1.png "isJRebel Logo")
 
 This microlibrary should take a string as input and assess whether or not it is equal to the String *JRebel*. The function will return `true` or `false` based on the equality check.
