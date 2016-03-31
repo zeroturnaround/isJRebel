@@ -19,6 +19,6 @@ package org.zeroturnaround.isjrebel;
 
 public class IsJRebel {
   public static boolean isJRebel(String input) {
-    return "JRebel".equals(input);
+    return "JRebel".equalsIgnoreCase(input);
   }
 }
