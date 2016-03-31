@@ -31,7 +31,7 @@ public class IsJRebel {
       .map(IsJRebel::l33tReplace)
       .filter(
         s ->
-          JREBEL.equalsIgnoreCase(s) ||StringUtils.getLevenshteinDistance(JREBEL, s) <= 1
+          JREBEL.equalsIgnoreCase(s) || StringUtils.getLevenshteinDistance(JREBEL, s) <= 1
       ).findAny().isPresent();
   }
 
