@@ -1,6 +1,6 @@
 ![isJRebel](https://zeroturnaround.com/wp-content/uploads/2016/04/isJRebel-April-fools-2016-v1.png "isJRebel Logo")
 
-This microlibrary should take a string as input and assess whether or not it is equal to the String *JRebel*. The function will return `true` or `false` based on the equality check.
+This microlibrary takes a string as input and assesses whether or not it is equal to the String *JRebel*. The function will return `true` or `false` based on the equality check.
 
 Currently the implementation is fairly simple and performs a Java String equality on *JRebel*, testing it against the input string. There are however many areas of improvement in our roadmap we plan to implement, as follows:
 
