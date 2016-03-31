@@ -17,8 +17,41 @@
 
 package org.zeroturnaround.isjrebel;
 
+import org.apache.commons.lang3.StringUtils;
+
+import java.util.stream.Stream;
+
 public class IsJRebel {
+
+  public static final String JREBEL = "JRebel";
+
   public static boolean isJRebel(String input) {
-    return "JRebel".equalsIgnoreCase(input);
+    return Stream.of(input)
+      .map(IsJRebel::dropPunctuation)
+      .map(IsJRebel::l33tReplace)
+      .filter(
+        s ->
+          JREBEL.equalsIgnoreCase(s) ||StringUtils.getLevenshteinDistance(JREBEL, s) <= 1
+      ).findAny().isPresent();
   }
+
+  private static String l33tReplace(String s) {
+    return s.replaceAll("1", "l")
+      .replaceAll("3", "e")
+      .replaceAll("4", "A")
+      .replaceAll("5", "S")
+      .replaceAll("6", "b")
+      .replaceAll("7", "t")
+      .replaceAll("8", "B")
+      .replaceAll("9", "g")
+      .replaceAll("0", "O");
+  }
+
+  private static String dropPunctuation(String input) {
+    return input.codePoints()
+      .filter(c -> Character.isLetter(c) || Character.isDigit(c) || Character.isWhitespace(c))
+      .collect(StringBuilder::new, StringBuilder::appendCodePoint, StringBuilder::append)
+      .toString();
+  }
+
 }

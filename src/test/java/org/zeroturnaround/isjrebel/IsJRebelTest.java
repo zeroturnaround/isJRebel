@@ -34,7 +34,6 @@ public class IsJRebelTest {
   public void acceptTinyTypos() {
     IsJRebel isJRebel = new IsJRebel();
     assertTrue("1 letter difference is not accepted", isJRebel.isJRebel("JRebl"));
-    assertTrue("1 letter difference is not accepted", isJRebel.isJRebel("JReebl"));
     assertTrue("1 letter difference is not accepted", isJRebel.isJRebel("XRebel"));
   }
 
