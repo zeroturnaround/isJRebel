@@ -25,16 +25,15 @@ public class IsJRebelTest {
   @Test
   public void passwordFormatting() {
     IsJRebel isJRebel = new IsJRebel();
-    assertTrue("Password formatting is not working", isJRebel.isJRebel("JR3b3l"));
-    assertTrue("Password formatting is not working", isJRebel.isJRebel("JR3b3l"));
-    assertTrue("Password formatting is not working", isJRebel.isJRebel("JR3b3l"));
+    assertTrue("Password formatting is not working", isJRebel.isJRebel("JReb3l"));
+    assertTrue("Password formatting is not working", isJRebel.isJRebel("JR3be1"));
+    assertTrue("Password formatting is not working", isJRebel.isJRebel("JR3b31"));
   }
 
   @Test
   public void acceptTinyTypos() {
     IsJRebel isJRebel = new IsJRebel();
     assertTrue("1 letter difference is not accepted", isJRebel.isJRebel("JRebl"));
-    assertTrue("1 letter difference is not accepted", isJRebel.isJRebel("JReebl"));
     assertTrue("1 letter difference is not accepted", isJRebel.isJRebel("XRebel"));
   }
 
