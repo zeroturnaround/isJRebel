@@ -62,7 +62,12 @@ public class IsJRebelTest {
     assertTrue("isJRebel ignores basic punctuation", isJRebel.isJRebel("JRebel,"));
   }
 
-
-
+  @Test
+  public void reverse() {
+    IsJRebel isJRebel = new IsJRebel();
+    assertTrue("isJRebel reverse", isJRebel.isJRebel("leberj"));
+    assertTrue("isJRebel reverse", isJRebel.isJRebel(":L,E?be.rj!'"));
+    assertFalse("isJRebel reverse", isJRebel.isJRebel("lebejr"));
+  }
 
 }
