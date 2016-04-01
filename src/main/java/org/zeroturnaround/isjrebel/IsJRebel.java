@@ -21,12 +21,14 @@ import org.apache.commons.lang3.StringUtils;
 
 import java.util.stream.Stream;
 
+import static org.apache.commons.lang3.StringUtils.reverse;
+
 public class IsJRebel {
 
   public static final String JREBEL = "JRebel";
 
   public static boolean isJRebel(String input) {
-    return Stream.of(input)
+    return Stream.of(input, reverse(input))
       .map(IsJRebel::dropPunctuation)
       .map(IsJRebel::l33tReplace)
       .filter(

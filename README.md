@@ -41,3 +41,7 @@ It's all too easy to append punctuation to Strings, so rather than blindly fail,
 * ":J,R?eb.el!';
 
 Please send PRs to help us make these dreams a reality.
+
+###5. Reverse
+
+In some sneaky cases, developers may want to get away by coding a reverse form of *JRebel*. We also detect these scenarios and test against the reversed input String. 
